@@ -39,4 +39,4 @@ local ter_nl=$'\n'
 local ter_commands="${ter_nl}%{$fg[white]%} 𝘧λ%{$reset_color%}${ter_exit_code} "
 
 # Build the prompt
-PROMPT='${ter_exit_status} ${ter_date} ${ter_dir} $(ter_git)${ter_commands}'
+PROMPT=' ${ter_exit_status} ${ter_date} ${ter_dir} $(ter_git)${ter_commands}'
