@@ -19,7 +19,7 @@ function ter_git()
         user="%{$fg[green]%}${email%@*}%{$reset_color%}"
     fi
 
-    echo "${icon} ${user} ${branch}$(parse_git_dirty)$(git_commits_ahead)$(git_commits_behind)"
+    echo "${icon} ${user}@${branch}$(parse_git_dirty)$(git_commits_ahead)$(git_commits_behind)"
 }
 
 # Git
