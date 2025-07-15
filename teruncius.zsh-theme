@@ -36,7 +36,7 @@ local ter_dir="%{$fg[yellow]%}%~%{$reset_color%}"
 local ter_exit_status="%(?,%{$fg[green]%}✓%{$reset_color%},%{$fg[red]%}✗%{$reset_color%})"
 local ter_exit_code="%(?,,%{$fg[white]%} → %{$reset_color%}%{$fg[red]%}%?%{$reset_color%})"
 local ter_nl=$'\n'
-local ter_commands="${ter_nl} ${ter_exit_status} %{$fg[white]%}𝘧λ%{$reset_color%}${ter_exit_code} "
+local ter_commands="${ter_nl} ${ter_exit_status} %{$fg[white]%}𝘧λ%{$reset_color%}${ter_exit_code}%{$fg[white]%} → %{$reset_color%}"
 
 # Build the prompt
 PROMPT='${ter_date} ${ter_dir} $(ter_git)${ter_commands}'
