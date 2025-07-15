@@ -10,12 +10,13 @@ function ter_git()
 
     local icon="%{$fg[white]%}ᚵ%{$reset_color%}"
     local branch="%{$fg[cyan]%}$(git_current_branch)%{$reset_color%}"
+
     email="$(git_current_user_email)"
     if [[ $email == "teruncius@proton.me" ]];
     then
-        user="%{$fg[red]%}$email%{$reset_color%}"
+        user="%{$fg[red]%}${email%@*}%{$reset_color%}"
     else
-        user="%{$fg[green]%}$email%{$reset_color%}"
+        user="%{$fg[green]%}${email%@*}%{$reset_color%}"
     fi
 
     echo "${icon} ${user} ${branch}$(parse_git_dirty)$(git_commits_ahead)$(git_commits_behind)"
